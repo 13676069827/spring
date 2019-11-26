@@ -32,4 +32,5 @@ rootProject.children.each {project ->
 include 'demo-test'
 include 'demo-process'
 include 'source-autowired'
+include 'spring-base-extend'
 
