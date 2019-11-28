@@ -1,6 +1,7 @@
 package cxf.demo;
 
 import cxf.demo.annotation.CustomAnnotation;
+import cxf.demo.annotation.StringCallBack;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,6 +11,9 @@ import org.springframework.stereotype.Component;
  **/
 @CustomAnnotation(isExist = true, attr = "cls")
 public class AnnotationAttributeClass {
+	final static StringCallBack callback = (x) -> {
+		System.out.println(x);
+	};
 
 	@CustomAnnotation(isExist = true, attr = "med")
 	private void methodAnno() {}
